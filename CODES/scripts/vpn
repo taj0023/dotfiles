@@ -1,0 +1,26 @@
+#!/bin/bash
+if [ -z $1 ]
+then
+	echo 'Usage: "vpn thm/htb/echo"'
+	exit 1
+fi
+
+if [[ $1 == thm ]]
+then
+	sudo openvpn /home/taj/CTF/vpns/THM.ovpn
+fi
+
+if [[ $1 == htb ]]
+then
+	sudo openvpn /home/taj/CTF/vpns/HTB.ovpn
+fi
+
+if [[ $1 == echo ]]
+then
+	sudo openvpn /home/taj/CTF/vpns/echoCTF.ovpn
+fi
+
+if [[ $1 == csl ]]
+then
+	sudo openvpn /home/taj/CTF/vpns/csl.ovpn
+fi

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+python3 /home/taj/TOOLS/HACK/sherlock/sherlock/sherlock.py "$1 $2"
+
+
