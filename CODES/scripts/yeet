@@ -1,9 +1,0 @@
-#!/bin/bash
-
-git add .
-read -p "Enter commmit message: " msg
-git commit -m "$msg" 2>&1
-echo "committed the message '$msg'"
-echo "Pushing...."
-git push 2>&1
-echo "Pushed!"
