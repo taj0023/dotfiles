@@ -1,10 +1,21 @@
 " My custom mappings
 nnoremap <F8> :NERDTreeToggle<CR>
-autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:ter python "%"<CR>i
-map <F2> i#!/usr/bin/env python3<ESC>o
-nnoremap <F6> 0i# <Esc>j 
+
+autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:ter python %<CR>i
+autocmd Filetype java nnoremap <buffer> <F5> :w<CR>:ter javac % && java %:t:r && rm ./*.class<CR>i
+
+autocmd Filetype java inoremap <buffer> console System.out.println("");<Esc>hhi
+autocmd Filetype java inoremap <buffer> main public static void main(String args[]){}<Esc>i<CR><CR><Esc>ki<Tab><Tab>
+autocmd Filetype python inoremap <buffer> console print("")<Esc>hi
+autocmd Filetype javascript inoremap <buffer> console console.log("");<Esc>hhi
+
+autocmd Filetype python nnoremap <F6> 0i# <Esc>j 
+autocmd Filetype java nnoremap <F6> <S-^>i// <Esc>j 
 nnoremap <F7> 0lli<BS><BS><Esc>j
 inoremap <C-s> <Esc>:w<CR>
+nnoremap <F2> i#!/usr/bin/env python3<CR>
+autocmd Filetype php inoremap <C-p> <?php ?><Esc>hhi 
+" autocmd Filetype php,html inoremap ><Tab> <Esc><S-^>lvey<S-$>a></><Esc>hpF<i
 
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")

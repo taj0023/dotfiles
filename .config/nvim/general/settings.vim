@@ -1,3 +1,17 @@
+" The trigger used to jump forward to the next placeholder.
+" NOTE expansion and forward jumping can, but needn't be the same trigger
+
+if !exists("g:UltiSnipsJumpForwardTrigger")
+    let g:UltiSnipsJumpForwardTrigger = "<Tab>"
+endif
+
+" custom
+filetype plugin indent on
+set foldmethod=indent
+set foldlevel=99
+
+let g:python_highlight_space_errors = 0
+
 " set leader key
 let g:mapleader = "\<Space>"
 
@@ -18,9 +32,9 @@ set conceallevel=0                      " So that I can see `` in markdown files
 set tabstop=2                           " Insert 2 spaces for a tab
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
+set autoindent                          " Good auto indent
 set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
-set autoindent                          " Good auto indent
 set laststatus=0                        " Always display the status line
 set number                              " Line numbers
 set cursorline                          " Enable highlighting of the current line
@@ -32,6 +46,10 @@ set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
+set relativenumber
+set nohlsearch
+set scrolloff=8
+set incsearch
 "set autochdir                           " Your working directory will always be the same as your working directory
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC

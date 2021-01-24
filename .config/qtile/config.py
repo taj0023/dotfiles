@@ -52,8 +52,8 @@ keys = [
 
     Key([mod, "control"], "r", lazy.restart(), desc="Restart qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown qtile"),
-    Key([mod], "r", lazy.spawncmd(),
-        desc="Spawn a command using a prompt widget"),
+    Key([mod], "r", lazy.spawn('rofi -show run'),desc="Spawn a command using a prompt widget"),
+    Key([mod], "b", lazy.spawn("brave"), desc="Opens up brave browser.")
 ]
 
 groups = [Group(i) for i in "12345678"]
@@ -74,7 +74,7 @@ for i in groups:
     ])
 
 layouts = [
-    layout.Max(),
+#     layout.Max(),
     layout.Stack(num_stacks=2, margin=8, border_focus='#00ff00'),
     # Try more layouts by unleashing below layouts.
     # layout.Bsp(),
@@ -95,6 +95,9 @@ widget_defaults = dict(
     padding=5,
 )
 extension_defaults = widget_defaults.copy()
+
+def net_connect():
+    qtile.cmd_spawn('alacritty -e nmcli radio wifi on; nmcli device wifi connect "Not Available" password "88888888"')
 
 screens = [
     Screen(
@@ -136,26 +139,6 @@ screens = [
                        foreground = colors[6],
                        background = colors[0],
                        padding = 0
-                       ),
-              widget.TextBox(
-                       text = '',
-                       background = colors[4],
-                       foreground = colors[5],
-                       padding = 0,
-                       fontsize = 37
-                       ),
-              widget.TextBox(
-                       text = " 🌡",
-                       padding = 2,
-                       foreground = colors[2],
-                       background = colors[5],
-                       fontsize = 11
-                       ),
-              widget.ThermalSensor(
-                       foreground = colors[2],
-                       background = colors[5],
-                       threshold = 90,
-                       padding = 5
                        ),
               widget.TextBox(
                        text='',
@@ -214,6 +197,7 @@ screens = [
               widget.Net(
                        interface = "wlp2s0",
                        format = '{down} ↓↑ {up}',
+                       mouse_callbacks = {"Button1": net_connect},
                        foreground = colors[2],
                        background = colors[4],
                        padding = 5
@@ -273,6 +257,8 @@ screens = [
             ],
             24,
         ),
+        wallpaper='/home/taj/Pictures/Ghosts.jpg',
+        wallpaper_mode='fill',
     ),
 ]
 

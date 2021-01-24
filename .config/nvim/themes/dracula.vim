@@ -4,7 +4,7 @@ fun! s:Dra()
     set background=dark
     syntax on
 endfunction
-command Dra call s:Dra()
+" command Dra call s:Dra()
 
-syntax on
-colorscheme dracula
+" syntax on
+" colorscheme dracula

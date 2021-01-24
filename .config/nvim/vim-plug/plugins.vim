@@ -7,7 +7,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-
+    " html auto-close tags
+    Plug 'alvan/vim-closetag'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " File Explorer
@@ -27,4 +28,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dracula/vim', { 'as': 'dracula' }
     " Split Terminal
     Plug 'vimlab/split-term.vim'
+    " Colorizer
+    Plug 'norcalli/nvim-colorizer.lua'
+    " GruvBox
+    Plug 'morhetz/gruvbox'
+  
 call plug#end()
