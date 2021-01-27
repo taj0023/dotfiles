@@ -10,6 +10,8 @@ alias l="ls -al"
 alias tree="ls --tree"
 alias tt="tt -theme dracula -t 30"
 alias def="xdg-open"
+alias pacman="pacman -Slq | fzf -m --preview 'cat <(pacman -Si {1} | psub) <(pacman -Fl {1} | awk {print $2}| psub)' | xargs -ro sudo pacman -S"
+
 
 
 # Old aliases
