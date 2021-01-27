@@ -1,5 +1,7 @@
 " My custom mappings
 nnoremap <F8> :NERDTreeToggle<CR>
+nnoremap <C-a> ggVG
+nnoremap <leader>f :Files<CR>
 
 autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:ter python %<CR>i
 autocmd Filetype java nnoremap <buffer> <F5> :w<CR>:ter javac % && java %:t:r && rm ./*.class<CR>i
