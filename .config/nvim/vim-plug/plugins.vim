@@ -7,12 +7,14 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
+    " Fuzzy Finder
+    Plug 'junegunn/fzf.vim'
+    " primeagens vim game
+    Plug 'ThePrimeagen/vim-be-good'
     " html auto-close tags
     Plug 'alvan/vim-closetag'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     " One-dark Theme
@@ -24,13 +26,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Airline Status
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    " Dracula Theme
-    Plug 'dracula/vim', { 'as': 'dracula' }
     " Split Terminal
     Plug 'vimlab/split-term.vim'
     " Colorizer
     Plug 'norcalli/nvim-colorizer.lua'
-    " GruvBox
-    Plug 'morhetz/gruvbox'
   
 call plug#end()
