@@ -7,6 +7,10 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
+    " Floaterm
+    Plug 'voldikss/vim-floaterm'
+    " Molokai theme
+    Plug 'tomasr/molokai'
     " Fuzzy Finder
     Plug 'junegunn/fzf.vim'
     " primeagens vim game
@@ -21,13 +25,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'joshdick/onedark.vim'
     " Stable version of coc
     Plug 'neoclide/coc.nvim', {'branch': 'release0'}
-    " Keeping up to date with master
-    Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
     " Airline Status
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    " Split Terminal
-    Plug 'vimlab/split-term.vim'
     " Colorizer
     Plug 'norcalli/nvim-colorizer.lua'
   
