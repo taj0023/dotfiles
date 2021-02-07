@@ -1,18 +1,5 @@
 " Images - https://www.reddit.com/r/vim/comments/ld8h2j/i_made_a_status_line_from_scratch_no_plugins_used/
-" I have used Nerd icon fonts. Icons won't work without them. https://github.com/ryanoasis/nerd-fonts/
- 
-" This statusline looks exactly like Vim Airline (even more customizable & powerful) & loads faster than Vim airline. Only take few ms to load.
- 
-" STARTUP TIME - With Vim Airline - ~250ms. With this statusline - ~100ms. Without any statusline - ~98ms.
- 
-" Add all of this at the end of your vimrc OR Create separate file like 'statusline.vim' & 'colorsgroup.vim' & source those files in your main vimrc.
-" e.g. source "~/.config/vim/statusline.vim"
- 
- 
- 
-" Color highlighting groups
-" Add this AFTER `colorscheme` option in your vimrc. Otherwise your colorscheme will clear this highlightings. OR use ColorScheme autocommand. VERY IMPORTANT.
- 
+
 " Color pallet
 " Green  - #2BBB4F (BG) - #080808 (FG)
 " Blue   - #4799EB
@@ -113,44 +100,43 @@ function! StslineMode()
  
     if l:CurrentMode==#"n"
         let g:StslinePriColor     = g:StslineColorGreen
-        let b:CurrentMode = "NORMAL"
+        let b:CurrentMode = " "
  
     elseif l:CurrentMode==#"i"
         let g:StslinePriColor     = g:StslineColorViolet
-        let b:CurrentMode = "INSERT"
+        let b:CurrentMode = " "
  
     elseif l:CurrentMode==#"c"
         let g:StslinePriColor     = g:StslineColorYellow
- 
-        let b:CurrentMode = "COMMAND"
+        let b:CurrentMode = " "
  
     elseif l:CurrentMode==#"v"
         let g:StslinePriColor     = g:StslineColorBlue
-        let b:CurrentMode = "VISUAL"
+        let b:CurrentMode = " "
  
     elseif l:CurrentMode==#"V"
         let g:StslinePriColor     = g:StslineColorBlue
-        let b:CurrentMode = "V-LINE"
+        let b:CurrentMode = " "
  
     elseif l:CurrentMode==#"\<C-v>"
         let g:StslinePriColor     = g:StslineColorBlue
-        let b:CurrentMode = "V-BLOCK"
+        let b:CurrentMode = " "
  
     elseif l:CurrentMode==#"R"
         let g:StslinePriColor     = g:StslineColorViolet
-        let b:CurrentMode = "REPLACE"
+        let b:CurrentMode = " "
  
     elseif l:CurrentMode==#"s"
         let g:StslinePriColor     = g:StslineColorBlue
-        let b:CurrentMode = "SELECT"
+        let b:CurrentMode = " "
  
     elseif l:CurrentMode==#"t"
         let g:StslinePriColor     =g:StslineColorYellow
-        let b:CurrentMode = "TERM"
+        let b:CurrentMode = " "
  
     elseif l:CurrentMode==#"!"
         let g:StslinePriColor     = g:StslineColorYellow
-        let b:CurrentMode = "SHELL"
+        let b:CurrentMode = " "
  
     endif
  
