@@ -1,16 +1,16 @@
-" The trigger used to jump forward to the next placeholder.
-" NOTE expansion and forward jumping can, but needn't be the same trigger
-
-if !exists("g:UltiSnipsJumpForwardTrigger")
-    let g:UltiSnipsJumpForwardTrigger = "<Tab>"
-endif
-
 " custom
-filetype plugin indent on
-set foldmethod=indent
+set foldmethod=syntax
 set foldlevel=99
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.php'
+filetype indent on
+set signcolumn=no 
 
 let g:python_highlight_space_errors = 0
+let g:pep8_ignore="E501,W601"
+
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
+
 
 " set leader key
 let g:mapleader = "\<Space>"
