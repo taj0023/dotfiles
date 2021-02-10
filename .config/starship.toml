@@ -1,11 +1,16 @@
 add_newline = false
 
 
-format = "$directory$package[⭆  ](bold green)"
+format = "$directory$git_branch$git_status$package$memory_usage$character"
 
 [directory]
-truncation_length = 1
+truncation_length = 3
 
-# [character]
-# success_symbol = "[⟿](bold green)"
-# error_symbol = "[⟿](bold red)"
+[character]
+success_symbol = "[➡ ](bold green)"
+error_symbol = "[➡ ](bold red)"
+
+[memory_usage]
+disabled = false
+style = "bold dimmed green"
+format = "\\[[${ram_pct}]($style)\\]"
