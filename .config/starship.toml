@@ -4,7 +4,7 @@ add_newline = false
 format = "$directory$git_branch$git_status$package$memory_usage$character"
 
 [directory]
-truncation_length = 3
+truncation_length = 1
 
 [character]
 success_symbol = "[➡ ](bold green)"
